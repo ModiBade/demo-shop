@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer components {
+  .breadcrumbs {
+    @apply flex items-center;
+  }
+
+  .pagination {
+    @apply flex items-center;
+
+    .page {
+      @apply transition bg-violet-100 text-violet-500 hover:bg-violet-500 hover:text-white mx-1 px-4 py-2 rounded-xl;
+    }
+
+    .active {
+      @apply bg-violet-500 text-white;
+    }
+  }
+}
+
+@layer utilities {
+  .row {
+    @apply w-full flex flex-col md:flex-row flex-wrap;
+
+    .col-1 {
+      @apply relative;
+      flex: 0 0 8.333333333333333%;
+      max-width: 8.333333333333333%;
+    }
+
+    .col-2 {
+      @apply relative;
+      flex: 0 0 16.66666666666667%;
+      max-width: 16.66666666666667%;
+    }
+
+    .col-3 {
+      @apply relative;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .col-4 {
+      @apply relative;
+      flex: 0 0 33.33333333333333%;
+      max-width: 33.33333333333333%;
+    }
+
+    .col-5 {
+      @apply relative;
+      flex: 0 0 41.66666666666667%;
+      max-width: 41.66666666666667%;
+    }
+
+    .col-6 {
+      @apply relative;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .col-7 {
+      @apply relative;
+      flex: 0 0 58.33333333333333%;
+      max-width: 58.33333333333333%;
+    }
+
+    .col-8 {
+      @apply relative;
+      flex: 0 0 66.66666666666667%;
+      max-width: 66.66666666666667%;
+    }
+
+    .col-9 {
+      @apply relative;
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .col-10 {
+      @apply relative;
+      flex: 0 0 83.33333333333333%;
+      max-width: 83.33333333333333%;
+    }
+
+    .col-11 {
+      @apply relative;
+      flex: 0 0 91.66666666666667%;
+      max-width: 91.66666666666667%;
+    }
+
+    .col-12 {
+      @apply relative;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .svg-3xl svg {
+    width: 75px;
+    height: 75px;
+  }
+
+  .svg-2xl svg {
+    width: 65px;
+    height: 65px;
+  }
+
+  .svg-xl svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .svg-lg svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .svg-md svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .svg-sm svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .svg-xs svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .svg-fade svg g [fill] {
+    @apply fill-slate-200;
+  }
+
+  .svg-slate svg g [fill] {
+    @apply fill-slate-400;
+  }
+
+  .svg-slate svg [fill] {
+    @apply fill-slate-400;
+  }
+
+  .svg-primary svg g [fill] {
+    @apply fill-blue-500;
+  }
+
+  .svg-primary svg [fill] {
+    @apply fill-blue-500;
+  }
+
+  .svg-light svg g [fill] {
+    @apply fill-white;
+  }
+
+  .svg-violet svg g [fill] {
+    @apply fill-violet-500;
+  }
+
+  .svg-warning svg g [fill] {
+    @apply fill-orange-500;
+  }
+
+  .svg-danger svg g [fill] {
+    @apply fill-red-500;
+  }
+
+  .svg-success svg g [fill] {
+    @apply fill-emerald-500;
+  }
+
+  .svg-success svg [fill] {
+    @apply fill-emerald-500;
+  }
+
+  .text-success {
+    @apply text-emerald-700;
+  }
+
+  .text-danger {
+    @apply text-pink-700;
+  }
+
+  .text-primary {
+    @apply text-blue-700;
+  }
+
+  .text-info {
+    @apply text-violet-700;
+  }
+
+  .dual-range-slider {
+    background-color: #dcfce7 !important;
+  }
+
+  .rc-slider {
+    height: 12px !important;
+    padding: 4px 0 !important;
+
+    .rc-slider-handle {
+      width: 18px !important;
+      height: 18px !important;
+      margin-top: -7px !important;
+      background-color: #43d19d !important;
+      border: solid 2px #328051 !important;
+    }
+
+    .rc-slider-track,
+    .rc-slider-tracks {
+      background-color: #0fa37a94 !important;
+    }
+  }
+}
+
+body {
+  @apply bg-slate-100;
+  font-family: iranyekanBakh;
+  font-weight: bold;
+}
+
+.font-iran {
+  font-family: IranSansWeb !important;
+}
+
+.font-vazir {
+  font-family: Vazir !important;
+}
+
+.font-bakh {
+  font-family: iranyekanBakh !important;
+}
+
+.swiper-button-prev {
+  background-color: white !important;
+  border-radius: 10px !important;
+}
+
+.swiper-button-prev::after {
+  font-size: 15px !important;
+  color: #000 !important;
+}
+
+.swiper-button-next {
+  background-color: white !important;
+  border-radius: 10px !important;
+}
+
+.swiper-button-next::after {
+  color: #000 !important;
+  font-size: 15px !important;
+}
